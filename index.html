@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Games</title>
+<meta name="description" content="Three browser games — Spelling Bee, Anagrams and Pinpoint. Free, no sign-up, play on any device.">
+<meta name="theme-color" content="#f7da21">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Games">
+<meta property="og:description" content="Three browser games — Spelling Bee, Anagrams and Pinpoint. Free, no sign-up.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23141414'/><polygon points='50,16 78,33 78,67 50,84 22,67 22,33' fill='%23f7da21'/></svg>">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1e222c; --ink:#f4f6fb; --muted:#9aa4b6;
+    --line:#2a2f3a; --accent:#f7da21;
+    --glow:radial-gradient(900px 520px at 72% -12%, #1b2030 0%, var(--bg) 58%);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#ffffff; --card:#f6f7f9; --card2:#eceef1; --ink:#15181f; --muted:#5d6674;
+      --line:#e2e6ec; --accent:#f7da21;
+      --glow:radial-gradient(900px 520px at 72% -12%, #fff9db 0%, var(--bg) 60%);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#ffffff; --card:#f6f7f9; --card2:#eceef1; --ink:#15181f; --muted:#5d6674;
+    --line:#e2e6ec; --accent:#f7da21;
+    --glow:radial-gradient(900px 520px at 72% -12%, #fff9db 0%, var(--bg) 60%);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0; background:var(--bg); color:var(--ink)}
+  body{
+    background-image:var(--glow); background-repeat:no-repeat; min-height:100svh;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:max(28px, env(safe-area-inset-top)) 20px calc(28px + env(safe-area-inset-bottom));
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .wrap{width:100%; max-width:660px}
+
+  header{display:flex; align-items:center; gap:12px; margin:14px 2px 4px}
+  .hex{width:30px; height:30px; flex:0 0 auto;
+    background:var(--accent);
+    clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+  h1{font-size:30px; font-weight:800; letter-spacing:-.5px; margin:0}
+  .sub{color:var(--muted); font-size:15px; margin:10px 2px 26px; line-height:1.5}
+
+  .grid{display:grid; gap:14px}
+  a.card{
+    display:flex; align-items:center; gap:16px; text-decoration:none; color:inherit;
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:18px 18px; transition:transform .14s ease, border-color .14s ease, background .14s ease;
+  }
+  a.card:hover{transform:translateY(-2px); border-color:var(--accent); background:var(--card2)}
+  a.card:active{transform:translateY(0)}
+  .ico{
+    width:52px; height:52px; flex:0 0 auto; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:24px; font-weight:800; color:#141414; letter-spacing:-1px;
+  }
+  .bee{background:#f7da21}
+  .ana{background:#7cc4ff}
+  .pin{background:#8ee6a5}
+  .txt{min-width:0; flex:1}
+  .name{font-weight:800; font-size:18px; display:flex; align-items:center; gap:8px}
+  .desc{color:var(--muted); font-size:13.5px; margin-top:3px; line-height:1.45}
+  .go{color:var(--muted); font-size:20px; flex:0 0 auto; transition:transform .14s ease}
+  a.card:hover .go{transform:translateX(3px); color:var(--accent)}
+  .tag{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.6px;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:2px 7px}
+
+  footer{color:var(--muted); font-size:12.5px; text-align:center; margin:30px 0 6px; line-height:1.6}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><span class="hex"></span><h1>Games</h1></header>
+  <p class="sub">Three browser games. Free, no sign-up, and they work on your phone — share a link and play together in real time.</p>
+
+  <div class="grid">
+    <a class="card" href="https://spellingbee.dancykier.com">
+      <span class="ico bee">B</span>
+      <span class="txt">
+        <span class="name">Spelling Bee <span class="tag">multiplayer</span></span>
+        <span class="desc">Build words from seven letters — every word must use the centre one. A new puzzle daily, plus a live scoreboard when you play with friends.</span>
+      </span>
+      <span class="go">→</span>
+    </a>
+
+    <a class="card" href="https://anagrams.dancykier.com">
+      <span class="ico ana">A</span>
+      <span class="txt">
+        <span class="name">Anagrams <span class="tag">multiplayer</span></span>
+        <span class="desc">Flip letters and claim words before anyone else — then steal theirs by rearranging and extending them. Fast, mean, and very hard to stop playing.</span>
+      </span>
+      <span class="go">→</span>
+    </a>
+
+    <a class="card" href="https://geo.dancykier.com">
+      <span class="ico pin">P</span>
+      <span class="txt">
+        <span class="name">Pinpoint</span>
+        <span class="desc">Dropped somewhere in the world with only the view to go on — guess where you are on the map. Unlimited rounds, no daily limit.</span>
+      </span>
+      <span class="go">→</span>
+    </a>
+  </div>
+
+  <footer>Made by Moshe Dancykier · <a href="https://dancykier.com">dancykier.com</a></footer>
+</div>
+</body>
+</html>
